@@ -1,0 +1,1352 @@
+<?php
+// Türkiye'nin 81 iline ait alan kodları, plaka kodları, posta kodları ve coğrafi bölge verileri
+$cities = [
+    ["name" => "Adana", "plate" => "01", "phone" => "322", "zip" => "01000", "region" => "Akdeniz"],
+    ["name" => "Adıyaman", "plate" => "02", "phone" => "416", "zip" => "02000", "region" => "Güneydoğu Anadolu"],
+    ["name" => "Afyonkarahisar", "plate" => "03", "phone" => "272", "zip" => "03000", "region" => "Ege"],
+    ["name" => "Ağrı", "plate" => "04", "phone" => "472", "zip" => "04000", "region" => "Doğu Anadolu"],
+    ["name" => "Amasya", "plate" => "05", "phone" => "358", "zip" => "05000", "region" => "Karadeniz"],
+    ["name" => "Ankara", "plate" => "06", "phone" => "312", "zip" => "06000", "region" => "İç Anadolu"],
+    ["name" => "Antalya", "plate" => "07", "phone" => "242", "zip" => "07000", "region" => "Akdeniz"],
+    ["name" => "Artvin", "plate" => "08", "phone" => "466", "zip" => "08000", "region" => "Karadeniz"],
+    ["name" => "Aydın", "plate" => "09", "phone" => "256", "zip" => "09000", "region" => "Ege"],
+    ["name" => "Balıkesir", "plate" => "10", "phone" => "266", "zip" => "10000", "region" => "Marmara"],
+    ["name" => "Bilecik", "plate" => "11", "phone" => "228", "zip" => "11000", "region" => "Marmara"],
+    ["name" => "Bingöl", "plate" => "12", "phone" => "426", "zip" => "12000", "region" => "Doğu Anadolu"],
+    ["name" => "Bitlis", "plate" => "13", "phone" => "434", "zip" => "13000", "region" => "Doğu Anadolu"],
+    ["name" => "Bolu", "plate" => "14", "phone" => "374", "zip" => "14000", "region" => "Karadeniz"],
+    ["name" => "Burdur", "plate" => "15", "phone" => "248", "zip" => "15000", "region" => "Akdeniz"],
+    ["name" => "Bursa", "plate" => "16", "phone" => "224", "zip" => "16000", "region" => "Marmara"],
+    ["name" => "Çanakkale", "plate" => "17", "phone" => "286", "zip" => "17000", "region" => "Marmara"],
+    ["name" => "Çankırı", "plate" => "18", "phone" => "376", "zip" => "18000", "region" => "İç Anadolu"],
+    ["name" => "Çorum", "plate" => "19", "phone" => "364", "zip" => "19000", "region" => "Karadeniz"],
+    ["name" => "Denizli", "plate" => "20", "phone" => "258", "zip" => "20000", "region" => "Ege"],
+    ["name" => "Diyarbakır", "plate" => "21", "phone" => "412", "zip" => "21000", "region" => "Güneydoğu Anadolu"],
+    ["name" => "Edirne", "plate" => "22", "phone" => "284", "zip" => "22000", "region" => "Marmara"],
+    ["name" => "Elazığ", "plate" => "23", "phone" => "424", "zip" => "23000", "region" => "Doğu Anadolu"],
+    ["name" => "Erzincan", "plate" => "24", "phone" => "446", "zip" => "24000", "region" => "Doğu Anadolu"],
+    ["name" => "Erzurum", "plate" => "25", "phone" => "442", "zip" => "25000", "region" => "Doğu Anadolu"],
+    ["name" => "Eskişehir", "plate" => "26", "phone" => "222", "zip" => "26000", "region" => "İç Anadolu"],
+    ["name" => "Gaziantep", "plate" => "27", "phone" => "342", "zip" => "27000", "region" => "Güneydoğu Anadolu"],
+    ["name" => "Giresun", "plate" => "28", "phone" => "454", "zip" => "28000", "region" => "Karadeniz"],
+    ["name" => "Gümüşhane", "plate" => "29", "phone" => "456", "zip" => "29000", "region" => "Karadeniz"],
+    ["name" => "Hakkari", "plate" => "30", "phone" => "438", "zip" => "30000", "region" => "Doğu Anadolu"],
+    ["name" => "Hatay", "plate" => "31", "phone" => "326", "zip" => "31000", "region" => "Akdeniz"],
+    ["name" => "Isparta", "plate" => "32", "phone" => "246", "zip" => "32000", "region" => "Akdeniz"],
+    ["name" => "Mersin", "plate" => "33", "phone" => "324", "zip" => "33000", "region" => "Akdeniz"],
+    ["name" => "İstanbul (Avrupa)", "plate" => "34", "phone" => "212", "zip" => "34000", "region" => "Marmara"],
+    ["name" => "İstanbul (Anadolu)", "plate" => "34", "phone" => "216", "zip" => "34000", "region" => "Marmara"],
+    ["name" => "İzmir", "plate" => "35", "phone" => "232", "zip" => "35000", "region" => "Ege"],
+    ["name" => "Kars", "plate" => "36", "phone" => "474", "zip" => "36000", "region" => "Doğu Anadolu"],
+    ["name" => "Kastamonu", "plate" => "37", "phone" => "366", "zip" => "37000", "region" => "Karadeniz"],
+    ["name" => "Kayseri", "plate" => "38", "phone" => "352", "zip" => "38000", "region" => "İç Anadolu"],
+    ["name" => "Kırklareli", "plate" => "39", "phone" => "288", "zip" => "39000", "region" => "Marmara"],
+    ["name" => "Kırşehir", "plate" => "40", "phone" => "386", "zip" => "40000", "region" => "İç Anadolu"],
+    ["name" => "Kocaeli", "plate" => "41", "phone" => "262", "zip" => "41000", "region" => "Marmara"],
+    ["name" => "Konya", "plate" => "42", "phone" => "332", "zip" => "42000", "region" => "İç Anadolu"],
+    ["name" => "Kütahya", "plate" => "43", "phone" => "274", "zip" => "43000", "region" => "Ege"],
+    ["name" => "Malatya", "plate" => "44", "phone" => "422", "zip" => "44000", "region" => "Doğu Anadolu"],
+    ["name" => "Manisa", "plate" => "45", "phone" => "236", "zip" => "45000", "region" => "Ege"],
+    ["name" => "Kahramanmaraş", "plate" => "46", "phone" => "344", "zip" => "46000", "region" => "Akdeniz"],
+    ["name" => "Mardin", "plate" => "47", "phone" => "482", "zip" => "47000", "region" => "Güneydoğu Anadolu"],
+    ["name" => "Muğla", "plate" => "48", "phone" => "252", "zip" => "48000", "region" => "Ege"],
+    ["name" => "Muş", "plate" => "49", "phone" => "436", "zip" => "49000", "region" => "Doğu Anadolu"],
+    ["name" => "Nevşehir", "plate" => "50", "phone" => "384", "zip" => "50000", "region" => "İç Anadolu"],
+    ["name" => "Niğde", "plate" => "51", "phone" => "388", "zip" => "51000", "region" => "İç Anadolu"],
+    ["name" => "Ordu", "plate" => "52", "phone" => "452", "zip" => "52000", "region" => "Karadeniz"],
+    ["name" => "Rize", "plate" => "53", "phone" => "464", "zip" => "53000", "region" => "Karadeniz"],
+    ["name" => "Sakarya", "plate" => "54", "phone" => "264", "zip" => "54000", "region" => "Marmara"],
+    ["name" => "Samsun", "plate" => "55", "phone" => "362", "zip" => "55000", "region" => "Karadeniz"],
+    ["name" => "Siirt", "plate" => "56", "phone" => "484", "zip" => "56000", "region" => "Güneydoğu Anadolu"],
+    ["name" => "Sinop", "plate" => "57", "phone" => "368", "zip" => "57000", "region" => "Karadeniz"],
+    ["name" => "Sivas", "plate" => "58", "phone" => "346", "zip" => "58000", "region" => "İç Anadolu"],
+    ["name" => "Tekirdağ", "plate" => "59", "phone" => "282", "zip" => "59000", "region" => "Marmara"],
+    ["name" => "Tokat", "plate" => "60", "phone" => "356", "zip" => "60000", "region" => "Karadeniz"],
+    ["name" => "Trabzon", "plate" => "61", "phone" => "462", "zip" => "61000", "region" => "Karadeniz"],
+    ["name" => "Tunceli", "plate" => "62", "phone" => "428", "zip" => "62000", "region" => "Doğu Anadolu"],
+    ["name" => "Şanlıurfa", "plate" => "63", "phone" => "414", "zip" => "63000", "region" => "Güneydoğu Anadolu"],
+    ["name" => "Uşak", "plate" => "64", "phone" => "276", "zip" => "64000", "region" => "Ege"],
+    ["name" => "Van", "plate" => "65", "phone" => "432", "zip" => "65000", "region" => "Doğu Anadolu"],
+    ["name" => "Yozgat", "plate" => "66", "phone" => "354", "zip" => "66000", "region" => "İç Anadolu"],
+    ["name" => "Zonguldak", "plate" => "67", "phone" => "372", "zip" => "67000", "region" => "Karadeniz"],
+    ["name" => "Aksaray", "plate" => "68", "phone" => "382", "zip" => "68000", "region" => "İç Anadolu"],
+    ["name" => "Bayburt", "plate" => "69", "phone" => "458", "zip" => "69000", "region" => "Karadeniz"],
+    ["name" => "Karaman", "plate" => "70", "phone" => "338", "zip" => "70000", "region" => "İç Anadolu"],
+    ["name" => "Kırıkkale", "plate" => "71", "phone" => "318", "zip" => "71000", "region" => "İç Anadolu"],
+    ["name" => "Batman", "plate" => "72", "phone" => "488", "zip" => "72000", "region" => "Güneydoğu Anadolu"],
+    ["name" => "Şırnak", "plate" => "73", "phone" => "486", "zip" => "73000", "region" => "Güneydoğu Anadolu"],
+    ["name" => "Bartın", "plate" => "74", "phone" => "378", "zip" => "74000", "region" => "Karadeniz"],
+    ["name" => "Ardahan", "plate" => "75", "phone" => "478", "zip" => "75000", "region" => "Doğu Anadolu"],
+    ["name" => "Iğdır", "plate" => "76", "phone" => "476", "zip" => "76000", "region" => "Doğu Anadolu"],
+    ["name" => "Yalova", "plate" => "77", "phone" => "226", "zip" => "77000", "region" => "Marmara"],
+    ["name" => "Karabük", "plate" => "78", "phone" => "370", "zip" => "78000", "region" => "Karadeniz"],
+    ["name" => "Kilis", "plate" => "79", "phone" => "348", "zip" => "79000", "region" => "Güneydoğu Anadolu"],
+    ["name" => "Osmaniye", "plate" => "80", "phone" => "328", "zip" => "80000", "region" => "Akdeniz"],
+    ["name" => "Düzce", "plate" => "81", "phone" => "380", "zip" => "81000", "region" => "Karadeniz"]
+];
+
+// Uluslararası bazı önemli telefon ülke kodları
+$country_codes = [
+    ["country" => "Türkiye", "code" => "+90", "iso" => "TR", "capital" => "Ankara"],
+    ["country" => "Almanya", "code" => "+49", "iso" => "DE", "capital" => "Berlin"],
+    ["country" => "Amerika Birleşik Devletleri", "code" => "+1", "iso" => "US", "capital" => "Washington D.C."],
+    ["country" => "İngiltere (Birleşik Krallık)", "code" => "+44", "iso" => "GB", "capital" => "Londra"],
+    ["country" => "Fransa", "code" => "+33", "iso" => "FR", "capital" => "Paris"],
+    ["country" => "İtalya", "code" => "+39", "iso" => "IT", "capital" => "Roma"],
+    ["country" => "Rusya", "code" => "+7", "iso" => "RU", "capital" => "Moskova"],
+    ["country" => "İspanya", "code" => "+34", "iso" => "ES", "capital" => "Madrid"],
+    ["country" => "Hollanda", "code" => "+31", "iso" => "NL", "capital" => "Amsterdam"],
+    ["country" => "Japonya", "code" => "+81", "iso" => "JP", "capital" => "Tokyo"],
+    ["country" => "Çin", "code" => "+86", "iso" => "CN", "capital" => "Pekin"],
+    ["country" => "Azerbaycan", "code" => "+994", "iso" => "AZ", "capital" => "Bakü"],
+    ["country" => "Kanada", "code" => "+1", "iso" => "CA", "capital" => "Ottawa"],
+    ["country" => "Avustralya", "code" => "+61", "iso" => "AU", "capital" => "Kanberra"],
+    ["country" => "Brezilya", "code" => "+55", "iso" => "BR", "capital" => "Brasilia"],
+    ["country" => "Hindistan", "code" => "+91", "iso" => "IN", "capital" => "Yeni Delhi"],
+    ["country" => "Güney Afrika", "code" => "+27", "iso" => "ZA", "capital" => "Pretoria"],
+    ["country" => "İsviçre", "code" => "+41", "iso" => "CH", "capital" => "Bern"],
+    ["country" => "Yunanistan", "code" => "+30", "iso" => "GR", "capital" => "Atina"],
+    ["country" => "Avusturya", "code" => "+43", "iso" => "AT", "capital" => "Viyana"]
+];
+?>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Kodları, Posta Kodları ve Plaka Kodları Rehberi</title>
+    <meta name="description" content="Türkiye ve Dünya'daki telefon alan kodları, posta kodları, plaka kodları ve yerel kodların kapsamlı rehberi ve canlı arama aracı.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Renk Paleti (Dark Theme Varsayılan) */
+            --bg-primary: #090d16;
+            --bg-secondary: #0f172a;
+            --bg-tertiary: #1e293b;
+            --accent-primary: #8b5cf6; /* Mor */
+            --accent-secondary: #06b6d4; /* Turkuaz */
+            --accent-gradient: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border-color: #334155;
+            --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            --transition-speed: 0.3s;
+            --font-display: 'Outfit', sans-serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        /* Light Theme Sınıfı */
+        body.light-mode {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f1f5f9;
+            --accent-primary: #6d28d9;
+            --accent-secondary: #0891b2;
+            --accent-gradient: linear-gradient(135deg, #6d28d9 0%, #0891b2 100%);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            overflow-x: hidden;
+        }
+
+        /* Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--accent-gradient);
+            width: 0%;
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.2;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            position: relative;
+            padding-bottom: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            color: var(--accent-secondary);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(9, 13, 22, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: background-color var(--transition-speed), border-color var(--transition-speed);
+        }
+
+        body.light-mode header {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color var(--transition-speed);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--accent-gradient);
+            transition: width var(--transition-speed);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Controls: Light/Dark Switcher */
+        .theme-toggle-btn {
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-tertiary);
+            transition: background-color var(--transition-speed);
+        }
+
+        .theme-toggle-btn:hover {
+            background-color: var(--border-color);
+        }
+
+        .theme-toggle-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .theme-toggle-btn .sun { display: none; }
+        body.light-mode .theme-toggle-btn .sun { display: block; }
+        body.light-mode .theme-toggle-btn .moon { display: none; }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Layout Columns */
+        .layout-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 80px 0;
+            position: relative;
+            background: radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
+                        radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.1) 0%, transparent 40%);
+        }
+
+        .hero-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+            max-width: 650px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            color: var(--accent-primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-family: var(--font-display);
+        }
+
+        /* Search Section */
+        .search-section {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+            scroll-margin-top: 100px;
+        }
+
+        .search-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--accent-gradient);
+        }
+
+        .search-container {
+            position: relative;
+            max-width: 600px;
+            margin: 1.5rem auto 0 auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+            border-radius: 50px;
+            border: 2px solid var(--border-color);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 1.1rem;
+            transition: all var(--transition-speed);
+            outline: none;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        body.light-mode .search-input {
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .search-input:focus {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .search-icon-svg {
+            position: absolute;
+            left: 1.3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            fill: var(--text-muted);
+            pointer-events: none;
+        }
+
+        .search-stats {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Dynamic Grid Result Cards */
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            max-height: 550px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+
+        /* Scrollbar styles for the results box */
+        .results-grid::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .results-grid::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+            border-radius: 10px;
+        }
+
+        .results-grid::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 10px;
+        }
+
+        .results-grid::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted);
+        }
+
+        .city-card {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all var(--transition-speed);
+            position: relative;
+        }
+
+        .city-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-secondary);
+            box-shadow: 0 10px 20px -10px rgba(6, 182, 212, 0.3);
+        }
+
+        .city-name {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .city-region {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            background-color: var(--bg-tertiary);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .code-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .code-label {
+            color: var(--text-muted);
+        }
+
+        .code-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .code-value.highlight-code {
+            color: var(--accent-secondary);
+        }
+
+        /* Sidebar Navigation (TOC) */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .sidebar-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .toc-list a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all var(--transition-speed);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc-list a:hover, .toc-list a.active {
+            color: var(--accent-primary);
+            padding-left: 5px;
+        }
+
+        /* Main Blog Area */
+        .blog-post {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 3rem;
+        }
+
+        .post-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .post-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .post-section {
+            margin-bottom: 3.5rem;
+            scroll-margin-top: 100px;
+        }
+
+        .post-section:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Code & Tables block */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .data-table th, .data-table td {
+            padding: 1rem 1.2rem;
+        }
+
+        .data-table th {
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-family: var(--font-display);
+        }
+
+        .data-table tr {
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color var(--transition-speed);
+        }
+
+        .data-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .data-table tbody tr:hover {
+            background-color: rgba(139, 92, 246, 0.05);
+        }
+
+        /* FAQ Accordion */
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: var(--bg-primary);
+            transition: all var(--transition-speed);
+        }
+
+        .faq-header {
+            padding: 1.2rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            background-color: var(--bg-tertiary);
+            font-weight: 600;
+            transition: background-color var(--transition-speed);
+        }
+
+        .faq-header:hover {
+            background-color: var(--border-color);
+        }
+
+        .faq-icon {
+            width: 20px;
+            height: 20px;
+            fill: var(--text-secondary);
+            transition: transform var(--transition-speed);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            fill: var(--accent-primary);
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-content {
+            padding: 1.2rem 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Alert block in text */
+        .info-box {
+            background: rgba(6, 182, 212, 0.08);
+            border-left: 4px solid var(--accent-secondary);
+            padding: 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 2rem 0;
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        /* Back to top button */
+        #back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-speed);
+            z-index: 999;
+        }
+
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(139, 92, 246, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 4rem 0 2rem 0;
+            margin-top: 5rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-decoration: none;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .footer-logo span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-links-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-links-list a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            transition: color var(--transition-speed);
+            font-size: 0.95rem;
+        }
+
+        .footer-links-list a:hover {
+            color: var(--text-primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Media Queries */
+        @media (max-width: 1024px) {
+            .layout-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                display: none; /* Mobilde veya tablette yanal menüyü gizle veya alt kısma al */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Basitlik adına mobil menüyü gizleyebilir veya menü açıcı ekleyebiliriz */
+            }
+            
+            .header-container {
+                justify-content: space-between;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .blog-post {
+                padding: 1.5rem;
+            }
+            
+            .search-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span>CodeMap</span>Rehberi
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#arama">Arama Konsolu</a></li>
+                <li><a href="#telefon-kodlari">Telefon Kodları</a></li>
+                <li><a href="#posta-kodlari">Posta Kodları</a></li>
+                <li><a href="#plaka-kodlari">Plaka Kodları</a></li>
+                <li><a href="#uluslararasi-kodlar">Uluslararası</a></li>
+                <li><a href="#sss">S.S.S.</a></li>
+                <li>
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Temayı Değiştir">
+                        <!-- Sun Icon (Light Mode) -->
+                        <svg class="sun" viewBox="0 0 24 24">
+                            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.02-.39-1.41 0s-.39 1.02 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.01c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+                        </svg>
+                        <!-- Moon Icon (Dark Mode) -->
+                        <svg class="moon" viewBox="0 0 24 24">
+                            <path d="M12.3 22h-.1c-5.5 0-10-4.5-10-10C2.2 6.8 6.4 2.5 11.8 2c.6-.1 1.2.3 1.4.8.2.6-.1 1.2-.6 1.5-3.3 1.9-5.1 5.6-4.5 9.4.8 4.7 4.9 8.2 9.7 7.7.9-.1 1.8-.4 2.6-.9.5-.3 1.2-.2 1.5.3.3.5.2 1.2-.3 1.5-1.7 1.1-3.7 1.7-5.7 1.7z"/>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <span class="badge">Modern & Etkileşimli Bilgi Bankası</span>
+            <h1>Alan Kodları, Posta Kodları ve Plakalar Rehberi</h1>
+            <p>Türkiye'nin 81 iline ve dünya ülkelerine ait güncel telefon alan kodları, posta kodları, plaka kodları ve coğrafi kodlamaların derinlemesine analiz edildiği, hızlı arama motoruna sahip tek sayfalık dev rehber.</p>
+        </div>
+    </section>
+
+    <!-- Main Content & Sidebar -->
+    <main class="container">
+        <!-- Interactive Search Engine -->
+        <section id="arama" class="search-section">
+            <h2 style="margin-top:0;">Akıllı Coğrafi Kod Arama Konsolu</h2>
+            <p>Aşağıdaki arama çubuğunu kullanarak Türkiye'nin 81 ili içerisinden arama yapabilirsiniz. Şehir adı, plaka kodu veya telefon alan kodu yazarak sonuçları anlık olarak filtreleyebilirsiniz.</p>
+            
+            <div class="search-container">
+                <svg class="search-icon-svg" viewBox="0 0 24 24">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+                <input type="text" id="city-search" class="search-input" placeholder="Şehir, plaka (örn. 34) veya alan kodu (örn. 212) yazın...">
+            </div>
+            
+            <div class="search-stats" id="search-stats">
+                Toplam 81 kayıttan 81 tanesi listeleniyor.
+            </div>
+
+            <div class="results-grid" id="results-grid">
+                <?php foreach ($cities as $city): ?>
+                    <div class="city-card" data-name="<?php echo strtolower($city['name']); ?>" data-plate="<?php echo $city['plate']; ?>" data-phone="<?php echo $city['phone']; ?>" data-region="<?php echo strtolower($city['region']); ?>">
+                        <div class="city-name">
+                            <?php echo $city['name']; ?>
+                            <span class="city-region"><?php echo $city['region']; ?></span>
+                        </div>
+                        <div class="code-row">
+                            <span class="code-label">Plaka Kodu:</span>
+                            <span class="code-value highlight-code"><?php echo $city['plate']; ?></span>
+                        </div>
+                        <div class="code-row">
+                            <span class="code-label">Telefon Kodu:</span>
+                            <span class="code-value">0<?php echo $city['phone']; ?></span>
+                        </div>
+                        <div class="code-row">
+                            <span class="code-label">Posta Kodu:</span>
+                            <span class="code-value"><?php echo $city['zip']; ?></span>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </section>
+
+        <!-- Columns Layout for Long Read -->
+        <div class="layout-wrapper">
+            <!-- Article Body -->
+            <div class="blog-body">
+                <article class="blog-post">
+                    
+                    <div class="post-meta">
+                        <span>
+                            <svg style="width:14px;height:14px;fill:currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-2-1.1-2-2-2zm0 16H5V8h14v11z"/></svg>
+                            15 Temmuz 2026
+                        </span>
+                        <span>
+                            <svg style="width:14px;height:14px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            12 Dk Okuma
+                        </span>
+                        <span>
+                            <svg style="width:14px;height:14px;fill:currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                            Ömer Canavar
+                        </span>
+                    </div>
+
+                    <!-- Section: Telefon Alan Kodları -->
+                    <div id="telefon-kodlari" class="post-section">
+                        <h2>1. Telefon Alan Kodları: Nedir ve Nasıl Çalışırlar?</h2>
+                        <p>Telefon alan kodları, telekomünikasyon ağlarında belirli bir coğrafi bölgeyi tanımlamak ve aramaları doğru yönlendirmek amacıyla kullanılan sayısal ön eklerdir. Modern şebekelerin temeli atılırken icat edilen bu kodlar, her bir yerleşkeyi küresel ağ üzerinde benzersiz kılmayı amaçlar.</p>
+                        
+                        <h3>Telefon Kodlarının Kısa Tarihçesi</h3>
+                        <p>1940'lı yılların ortalarında Amerika Birleşik Devletleri'nde <strong>AT&T</strong> ve <strong>Bell Laboratuvarları</strong> tarafından geliştirilen <em>Direct Distance Dialing (Doğrudan Mesafe Arama)</em> sistemi, alan kodlarının (North American Numbering Plan - NANP) temelini oluşturdu. Bu sistemden önce, şehirlerarası veya uluslararası arama yapabilmek için öncelikle bir santral operatörüne bağlanmak ve operatör aracılığıyla manuel yönlendirme yapılmasını beklemek gerekiyordu. Alan kodları sayesinde yönlendirme işlemi santrallerde otomatik hale gelmiştir.</p>
+                        
+                        <h3>Türkiye'de Telefon Alan Kodu Yapısı</h3>
+                        <p>Türkiye Cumhuriyeti sınırları içerisinde sabit telefon hatları için kullanılan alan kodlama mimarisi, coğrafi bölgelere göre gruplandırılmıştır. Türkiye'nin ülke kodu olan <strong>+90</strong> sonrasında gelen 3 haneli alan kodları (örn: 212, 312, 232) belirli illeri temsil eder. Bir sabit numarayı ararken ülke içinden 0 (sıfır) ön eki ile beraber aranır: <code>0 (Alan Kodu) (7 Haneli Numara)</code>.</p>
+                        
+                        <div class="info-box">
+                            <p><strong>Önemli Detay:</strong> İstanbul, yoğun nüfus ve yüksek talep nedeniyle iki farklı sabit alan koduna bölünmüş tek ilimizdir. Avrupa Yakası için <strong>0212</strong>, Anadolu Yakası için ise <strong>0216</strong> kodu kullanılmaktadır.</p>
+                        </div>
+
+                        <h3>Türkiye Bölgesel Sabit Hat Telefon Kodları Analizi</h3>
+                        <p>Aşağıdaki tabloda coğrafi dağılımı daha iyi anlamak için bölgesel olarak önemli sabit alan kodlarının listesini bulabilirsiniz:</p>
+                        
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Alan Kodu</th>
+                                        <th>İl / Bölge</th>
+                                        <th>Coğrafi Konum</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>212</td>
+                                        <td>İstanbul (Avrupa Yakası)</td>
+                                        <td>Marmara Bölgesi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>216</td>
+                                        <td>İstanbul (Anadolu Yakası)</td>
+                                        <td>Marmara Bölgesi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>312</td>
+                                        <td>Ankara</td>
+                                        <td>İç Anadolu Bölgesi (Başkent)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>232</td>
+                                        <td>İzmir</td>
+                                        <td>Ege Bölgesi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>224</td>
+                                        <td>Bursa</td>
+                                        <td>Marmara Bölgesi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>242</td>
+                                        <td>Antalya</td>
+                                        <td>Akdeniz Bölgesi</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Section: Posta Kodları -->
+                    <div id="posta-kodlari" class="post-section">
+                        <h2>2. Posta Kodları ve Posta Kodu Sistemi (ZIP Code)</h2>
+                        <p>Posta kodu, mektupların, kargoların ve diğer gönderilerin lojistik süreçlerde çok daha hızlı, hatasız ve otomatik olarak sınıflandırılıp teslim edilmesi için adreslere atanan adresleme dizileridir. Posta kodlarının kullanılmadığı bir dünyada, manuel adres okuma süreçleri nedeniyle teslimat süreleri günleri, hatta haftaları bulabilirdi.</p>
+                        
+                        <h3>Posta Kodlarının Tarihsel Gelişimi</h3>
+                        <p>Modern posta kodu sistemi ilk olarak 1960'larda Almanya'da kullanılmaya başlanmıştır. Kısa süre sonra 1963 yılında Amerika Birleşik Devletleri kendi sistemi olan <strong>ZIP Code (Zone Improvement Plan)</strong> sistemini tanıtmıştır. ZIP kodu, mektupların posta sistemi genelinde çok daha hızlı ("zippy") hareket etmesini sağlamak amacıyla tasarlanmıştı.</p>
+                        
+                        <h3>Türkiye'de Posta Kodu Nasıl Hesaplanır?</h3>
+                        <p>Türkiye'de PTT (Posta ve Telgraf Teşkilatı) tarafından yönetilen posta kodu sistemi <strong>5 haneli rakamlardan</strong> oluşur. Bu 5 haneli yapının çok net bir mantığı vardır:</p>
+                        <ul>
+                            <li><strong>İlk 2 Hane:</strong> İlgili ilin resmi plaka kodunu gösterir (Örn: İstanbul için 34, Ankara için 06).</li>
+                            <li><strong>Son 3 Hane:</strong> İlçeyi, mahalleyi veya belirli bir dağıtım bölgesini sembolize eder.</li>
+                        </ul>
+                        <p>Örneğin, Kadıköy / İstanbul için posta kodları <code>34710</code> ile başlarken, Çankaya / Ankara için posta kodları <code>06100</code> ile başlayabilmektedir. Bu yapı sayesinde kargo tasnif makineleri adresi okumaya ihtiyaç duymadan sadece ilk iki haneye bakarak gönderiyi doğru ile sevk eder, ardından son üç haneye bakarak doğru ilçe dağıtım merkezine yönlendirir.</p>
+                    </div>
+
+                    <!-- Section: Plaka Kodları -->
+                    <div id="plaka-kodlari" class="post-section">
+                        <h2>3. İl Plaka Kodları ve Tarihsel Gelişimi</h2>
+                        <p>Türkiye'de taşıtların tescil plakalarında yer alan il kodları, Cumhuriyet tarihi boyunca ülkenin idari yapısının nasıl şekillendiğini gösteren harika birer arşiv niteliğindedir. Plakalar, araçların hangi ile kayıtlı olduğunu ve vergilendirildiğini belirlemeyi kolaylaştırır.</p>
+                        
+                        <h3>Plaka Kodlarının Belirlenme Hikayesi</h3>
+                        <p>Türkiye'de plaka kodları ilk kez 1962 yılında yayımlanan bir yönetmelikle yürürlüğe girmiştir. O tarihte Türkiye'de bulunan 67 il, alfabetik sıraya dizilerek 01'den (Adana) 67'ye (Zonguldak) kadar numaralandırılmıştır. Bu tarihten sonra il statüsü kazanan ilçelere ise alfabetik sıraya bakılmaksızın, il olma sırasına göre 68'den başlayan kodlar verilmiştir.</p>
+                        
+                        <h3>Sonradan İl Olan Bölgeler</h3>
+                        <p>Alfabetik sıralamayı bozan bu istisnaların ilki 1989 yılında il yapılan <strong>Aksaray (68)</strong> olmuştur. Aksaray'ı sırasıyla Bayburt (69), Karaman (70) ve Kırıkkale (71) takip etmiştir. En son il olan yer ise 1999 yılında il statüsüne kavuşan <strong>Düzce (81)</strong> olmuştur. Bu nedenle, alfabetik olarak D harfinde yer almasına rağmen Düzce'nin plaka kodu listenin sonunda yani 81 olarak yer almaktadır.</p>
+                        
+                        <div class="info-box">
+                            <p><strong>Biliyor muydunuz?</strong> Eğer plaka kodları bugün tamamen yeniden alfabetik olarak düzenlenseydi, Adana yine 01 olurken, Düzce 23. sırada yer alacaktı ve Zonguldak listenin sonuna (81) kayacaktı.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section: Uluslararası Kodlar -->
+                    <div id="uluslararasi-kodlar" class="post-section">
+                        <h2>4. Uluslararası Telefon Kodları ve Dünya Standartları</h2>
+                        <p>Dünya üzerindeki tüm ülkeler, sınır ötesi telefon görüşmelerini yürütebilmek amacıyla belirli kurallara tabidir. Bir ülkeden başka bir ülkeyi ararken kullanılan ön eklere "Uluslararası Ülke Kodu" denir. Bu standartlar, Birleşmiş Milletler'in bir kuruluşu olan <strong>ITU (International Telecommunication Union - Uluslararası Telekomünikasyon Birliği)</strong> tarafından belirlenir ve <strong>E.164</strong> tavsiye kararı altında yönetilir.</p>
+                        
+                        <h3>ITU E.164 Numaralandırma Şeması</h3>
+                        <p>E.164 standardına göre, uluslararası bir telefon numarası en fazla 15 haneden oluşabilir. Yapı şu şekildedir: <code>[Ülke Kodu] [Ulusal Alan Kodu] [Abone Numarası]</code>. Örneğin, yurt dışından Türkiye'deki bir numarayı aramak için önce <code>+90</code> (veya sıfır çift sıfır çevirerek <code>0090</code>) tuşlanır, ardından şehir kodu (örn: 212) ve son olarak 7 haneli abone numarası girilir.</p>
+                        
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ülke</th>
+                                        <th>Uluslararası Alan Kodu</th>
+                                        <th>ISO Ülke Kodu</th>
+                                        <th>Başkent</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($country_codes as $country): ?>
+                                        <tr>
+                                            <td><strong><?php echo $country['country']; ?></strong></td>
+                                            <td style="color:var(--accent-primary); font-weight:600;"><?php echo $country['code']; ?></td>
+                                            <td><?php echo $country['iso']; ?></td>
+                                            <td><?php echo $country['capital']; ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Section: Sıkça Sorulan Sorular -->
+                    <div id="sss" class="post-section">
+                        <h2>5. Sıkça Sorulan Sorular (S.S.S.)</h2>
+                        <p>Alan kodları, posta kodları ve plaka kodları hakkında kullanıcıların en çok merak ettiği sorular ve yanıtları:</p>
+                        
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <div class="faq-header">
+                                    Türkiye'nin uluslararası telefon alan kodu nedir?
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                                </div>
+                                <div class="faq-content">
+                                    <p>Türkiye'nin uluslararası telefon ülke alan kodu <strong>+90</strong>'dır. Yabancı bir ülkeden Türkiye'deki bir sabit veya mobil hattı ararken numaranın başına +90 (veya 0090) eklenmesi zorunludur.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-header">
+                                    Posta kodu neden önemlidir ve yanlış girilirse ne olur?
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                                </div>
+                                <div class="faq-content">
+                                    <p>Posta kodu, kargo ve postaların otomatik ayrıştırma makinelerinde işlenmesini sağlar. Yanlış girilmesi durumunda gönderiniz yanlış şehre ya da transfer merkezine sevk edilerek teslimatın günlerce gecikmesine neden olabilir.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-header">
+                                    Türkiye'de en son eklenen plaka kodu hangisidir?
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                                </div>
+                                <div class="faq-content">
+                                    <p>Türkiye'de en son eklenen plaka kodu <strong>81</strong> olup, 1999 yılında il olan <strong>Düzce</strong>'ye aittir.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <div class="faq-header">
+                                    Neden bazı illerin telefon alan kodları birden fazladır?
+                                    <svg class="faq-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+                                </div>
+                                <div class="faq-content">
+                                    <p>Nüfus ve ekonomik faaliyetlerin aşırı yoğun olduğu büyükşehirlerde (örneğin İstanbul), tek bir alan kodunun sağlayabileceği maksimum telefon hattı kapasitesi yetersiz kalmaktadır. Bu nedenle İstanbul coğrafi olarak ikiye bölünmüş ve iki ayrı alan kodu atanmıştır (212 ve 216).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+
+            <!-- Sidebar Sticky Navigation -->
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <div class="sidebar-title">Rehber İçindekiler</div>
+                    <ul class="toc-list">
+                        <li><a href="#arama" class="active">Arama Konsolu</a></li>
+                        <li><a href="#telefon-kodlari">1. Telefon Kodları</a></li>
+                        <li><a href="#posta-kodlari">2. Posta Kodları</a></li>
+                        <li><a href="#plaka-kodlari">3. Plaka Kodları</a></li>
+                        <li><a href="#uluslararasi-kodlar">4. Uluslararası Kodlar</a></li>
+                        <li><a href="#sss">5. Sıkça Sorulan Sorular</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo"><span>CodeMap</span>Rehberi</a>
+                    <p style="font-size: 0.9rem;">Türkiye'nin ve dünyanın coğrafi kodlama standartlarını derleyen, arama ve filtreleme araçları sunan kapsamlı portal.</p>
+                </div>
+                <div>
+                    <h4 style="color:var(--text-primary);">Hızlı Bağlantılar</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#arama">Akıllı Arama Konsolu</a></li>
+                        <li><a href="#telefon-kodlari">Sabit Telefon Kodları</a></li>
+                        <li><a href="#posta-kodlari">Posta Kodu Yapısı</a></li>
+                        <li><a href="#plaka-kodlari">Tarihsel Plakalar</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color:var(--text-primary);">Hakkımızda</h4>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Bu site backlinkmatc.netlify.app/ için özel olarak geliştirilmiş tek sayfalık, modern ve performanslı bir bilgi tabanı çalışmasıdır.</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 CodeMap Rehberi. Tüm Hakları Saklıdır.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" aria-label="Yukarı Çık">
+        <svg style="width:24px;height:24px;fill:currentColor" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+        // Tema Değiştirme (Light / Dark Mode)
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        // Sayfa yüklendiğinde kullanıcının tercihini kontrol et
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            body.classList.add('light-mode');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
+            localStorage.setItem('theme', theme);
+        });
+
+        // Scroll Progress & Active TOC Link Highlight
+        const scrollProgress = document.getElementById('scroll-progress');
+        const tocLinks = document.querySelectorAll('.toc-list a, .nav-links a');
+        const sections = document.querySelectorAll('.post-section, #arama');
+
+        window.addEventListener('scroll', () => {
+            // Progress Bar Güncelleme
+            const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+            if (totalScroll > 0) {
+                const percentage = (window.pageYOffset / totalScroll) * 100;
+                scrollProgress.style.width = percentage + '%';
+            }
+
+            // Aktif Bölüm Linkini Yakalama
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 120) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Back to top butonu görünürlüğü
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        // Back to top buton tıklama eylemi
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Canlı Arama ve Filtreleme Motoru
+        const searchInput = document.getElementById('city-search');
+        const cityCards = document.querySelectorAll('.city-card');
+        const searchStats = document.getElementById('search-stats');
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim()
+                .replace(/ı/g, 'i')
+                .replace(/ğ/g, 'g')
+                .replace(/ü/g, 'u')
+                .replace(/ş/g, 's')
+                .replace(/ö/g, 'o')
+                .replace(/ç/g, 'c');
+
+            let visibleCount = 0;
+
+            cityCards.forEach(card => {
+                const name = card.getAttribute('data-name')
+                    .replace(/ı/g, 'i')
+                    .replace(/ğ/g, 'g')
+                    .replace(/ü/g, 'u')
+                    .replace(/ş/g, 's')
+                    .replace(/ö/g, 'o')
+                    .replace(/ç/g, 'c');
+                const plate = card.getAttribute('data-plate');
+                const phone = card.getAttribute('data-phone');
+                const region = card.getAttribute('data-region')
+                    .replace(/ı/g, 'i')
+                    .replace(/ğ/g, 'g')
+                    .replace(/ü/g, 'u')
+                    .replace(/ş/g, 's')
+                    .replace(/ö/g, 'o')
+                    .replace(/ç/g, 'c');
+
+                if (name.includes(query) || plate.includes(query) || phone.includes(query) || region.includes(query)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            searchStats.textContent = `Toplam 81 kayıttan ${visibleCount} tanesi listeleniyor.`;
+        });
+
+        // FAQ Akordeon Açma/Kapama İşlemi
+        const faqHeaders = document.querySelectorAll('.faq-header');
+        
+        faqHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const content = item.querySelector('.faq-content');
+                const isActive = item.classList.contains('active');
+
+                // Diğer tüm açık akordeonları kapat
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-content').style.maxHeight = null;
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+	<script src="https://bcklinkx.com/api/197.js"></script>
+</body>
+</html>
